@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main">
+    <div class="logo">
+      <a href="/">🎮 Code2Kill</a>
+    </div>
+    <li class="search-container">
+      <i class="fas fa-search" style="margin-right: 5px;"></i>
+      <input type="text" placeholder="Search..." class="search-input">
+    </li>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href=""><i class="fas fa-home"></i> Home</a></li>
+        <li><a href=""><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href=""><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href=""><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <div class="btn-div">
+          <button class="btn">Login</button>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+
+    <div class="content">
+    <h2 data-aos="flip-left">Popular Games</h2>
+    <div class="cols-3">
+      <!-- grid content Star -->
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="../Images/frank-woods-call-of-5120x2880-19693.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops 6</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="../Images/call-of-duty-modern-warfare-2-2022-games-call-of-duty-3840x2160-8565.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Modern Warfare II</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="../Images/forza-motorsport-3840x2160-23006.jpg" alt="">
+        <div class="div-text">
+          <h3>Forza Sports</h3>
+          <p>Forza Horizon</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="../Images/neymar-jr-efootball-3840x2160-22229.jpg" alt="">
+        <div class="div-text">
+          <h3>FiFa</h3>
+          <p>FIFA 18</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="../Images/battlefield-6-key-3840x2160-23275.jpg" alt="">
+        <div class="div-text">
+          <h3>battlefield</h3>
+          <p>battlefield 6</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+      <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // 1 second animation
+    offset: 120,    // distance before element shows animation
+    once: true      // animate only once
+  });
+</script>
+</body>
+</html>

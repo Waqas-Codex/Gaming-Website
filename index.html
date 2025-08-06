@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Styles/styles.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+  <header class="main">
+    <div class="logo">
+      <a href="/">🎮 Code2Kill</a>
+    </div>
+    <li class="search-container">
+      <i class="fas fa-search" style="margin-right: 5px;"></i>
+      <input type="text" placeholder="Search..." class="search-input">
+    </li>
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href=""><i class="fas fa-home"></i> Home</a></li>
+        <li><a href=""><i class="fas fa-info-circle"></i> About</a></li>
+        <li><a href=""><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <li><a href=""><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <div class="btn-div">
+          <button class="btn">Login</button>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <!--------Hero Section Start--------->
+
+  <section class="hero-section" id="heroSection">
+
+    <div class="content" >
+      <h1 data-aos="fade-up" style="text-align: center;" id="heroTitle">Call Of Duty</h1>
+      <H3 data-aos="zoom-in" id="heroDesc">Black Ops 7</H3>
+      <div data-aos="fade-up" class="main-button">
+        <button  class="main-btn" id="main-btn1">Pre-Order Now </button>
+      </div>
+    </div>
+
+    </div>
+
+    <div data-aos="fade-up" class="arrow">
+      <img src="Images/prev.png" class="arrow left-arrow" onclick="prevHero()" />
+  <img src="Images/next.png" class="arr" onclick="nextHero()" />
+    </div>
+
+    
+
+
+  </section>
+
+    <!--------Hero Section End--------->
+
+    <!-- <div class="image-layout">
+  <div class="main-image">
+    <img src="Images/minecraft-key-art-5120x2880-20204.jpg" alt="Main" />
+  </div>
+  <div class="side-images">
+    <img src="Images/cyberpunk-2077-3840x2160-20154.jpg" alt="Thumb 1" />
+    <img src="Images/fortnite-og-season-3840x2160-21991.jpg" alt="Thumb 2" />
+    <img src="Images/days-gone-5120x2880-21611.jpg" alt="Thumb 3" />
+  </div>
+</div> -->
+
+
+  <div class="content">
+    <h2 data-aos="flip-left">Popular Games</h2>
+    <div class="cols-3">
+      <!-- grid content Star -->
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/cod-black-ops-6-game-size-revealed-v0-7qm1nh6l8vid1.webp" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops 6</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/call-of-duty-modern-warfare-2-2022-games-call-of-duty-3840x2160-8565.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Modern Warfare II</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/forza-motorsport-3840x2160-23006.jpg" alt="">
+        <div class="div-text">
+          <h3>Forza Sports</h3>
+          <p>Forza Horizon</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/neymar-jr-efootball-3840x2160-22229.jpg" alt="">
+        <div class="div-text">
+          <h3>FiFa</h3>
+          <p>FIFA 18</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/img.jpeg" alt="">
+        <div class="div-text">
+          <h3>battlefield</h3>
+          <p>battlefield 6</p>
+          <button class="grid-btn">Purchase Now</button>
+        </div>
+      </div>
+
+      <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/mafia-the-old-7680x4320-22472.jpg" alt="">
+        <div class="div-text">
+          <h3>Mafia</h3>
+          <p>Mafia The Old Country</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/black-ops-cold-war-release-date-leak.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/gta-vi-wallpaper-made-from-all-the-new-artwork-v0-i4j746bkxeze1.jpg" alt="">
+        <div class="div-text">
+          <h3>Grand Theft Auto</h3>
+          <p>GTA VI</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/days-gone-5120x2880-21611.jpg" alt="">
+        <div class="div-text">
+          <h3>Days Gone</h3>
+          <p>Remastered</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/cyberpunk-2077-pc-games-playstation-4-xbox-one-xbox-series-6469x3500-640.jpg" alt="">
+        <div class="div-text">
+          <h3>Cyber Bug</h3>
+          <p>CyberPunk 2077</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/delta-force-hawk-6422x3568-21396.jpg" alt="">
+        <div class="div-text">
+          <h3>Delta Force</h3>
+          <p>Delta Force Hawk</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/far-cry-6-ant-n-castillo-giancarlo-esposito-diego-anthony-7840x5796-1829.jpg" alt="">
+        <div class="div-text">
+          <h3>Far Cry</h3>
+          <p>Far Cry 6</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/minecraft-key-art-5120x2880-20204.jpg" alt="">
+        <div class="div-text">
+          <h3>Minecraft</h3>
+          <p>Minecraft Java Edition</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/gta-5-grand-theft-8640x5400-10749.jpg" alt="">
+        <div class="div-text">
+          <h3>Grand Theft Auto</h3>
+          <p>Gta V</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/wallpaperflare.com_wallpaper (1).jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/wallpaperflare.com_wallpaper (2).jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/wallpaperflare.com_wallpaper.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/watch-dogs-legion-playstation-5-playstation-4-xbox-series-x-6000x5400-692.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/007-first-light-3840x2160-22684.jpg" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+       <div class="thumbnail" data-aos="fade-up" data-aos-delay="100">
+        <img class="img" src="Images/counter-strike-2-7680x4480-11129.png" alt="">
+        <div class="div-text">
+          <h3>Call Of Duty</h3>
+          <p>Black Ops Cold War</p>
+          <button class="grid-btn">Book Now</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  
+
+  <!-- grid content End -->
+
+ 
+
+  </div>
+
+  <!--Pagination Start-->
+<div class="pagination-container" data-aos="fade-up" data-aos-delay="110">
+  <ul class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="Paginations/index.html">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">5</a>
+    <a href="#">6</a>
+    <a href="#">...</a>
+    <a href="#">10</a>
+    <a href="#" class="next">Next</a>
+  </ul>
+</div>
+<!--Pagination End-->
+
+  <!--Footer Start-->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>About Us</h3>
+        <p>We provide top gaming experiences with real-time graphics and multiplayer support. Dive into our world of
+          action.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: Cap@gmail.com.com</p>
+        <p>Phone: +98 11 2 tatte ek Lund</p>
+        <p>Location: LaudaPur</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Hello World. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!--Footer End-->
+
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    offset: 120,    
+    once: true      
+  });
+
+
+
+const heroData = [
+    {
+      image: 'Images/call-of-duty-black-ops-7-ej-1920x1080.jpg',
+      title: 'Call of Duty',
+      desc: 'Welcome to battle zone!'
+    },
+    {
+      image: 'Images/gta-vi-wallpaper-made-from-all-the-new-artwork-v0-i4j746bkxeze1.jpg',
+      title: 'Grand Theft Auto',
+      desc: 'Ultimate Gaming experience.'
+    },
+    {
+      image: 'Images/mafia-the-old-7680x4320-22472.jpg',
+      title: 'Mafia The Country',
+      desc: 'Experience This New Mafia Game.'
+    },
+    {
+      image: 'Images/neymar-jr-efootball-3840x2160-22229.jpg',
+      title: 'FIFA 25',
+      desc: 'Kick off with the latest football game.',
+    }
+  ];
+
+  let currentHero = 0;
+
+  function updateHeroImage() {
+    const hero = document.getElementById('heroSection');
+    const title = document.getElementById('heroTitle');
+    const desc = document.getElementById('heroDesc');
+    const  btn= document.getElementById('main-btn1');
+
+    hero.style.backgroundImage = `url('${heroData[currentHero].image}')`;
+    title.textContent = heroData[currentHero].title;
+    desc.textContent = heroData[currentHero].desc;
+  }
+
+  function nextHero() {
+    currentHero = (currentHero + 1) % heroData.length;
+    updateHeroImage();
+  }
+
+  function prevHero() {
+    currentHero = (currentHero - 1 + heroData.length) % heroData.length;
+    updateHeroImage();
+  }
+
+
+  updateHeroImage();
+
+
+</script>
+
+</html>
