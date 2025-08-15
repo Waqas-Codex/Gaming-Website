@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Epic OTT / GameStore UI — Demo</title>
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<!-- tsParticles (optional subtle particles) -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js" defer></script>
+
+<style>
+  :root{
+    --bg1:#070607;
+    --bg2:#12060a;
+    --accent:#ff2d2d;
+    --accent-2:#00f0ff;
+    --muted:#bdbdbd;
+    --card:#0f1115;
+  }
+
+  /* Reset */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family: Inter, system-ui, Arial;
+      font-family: "Noto Sans JP", sans-serif;
+    background: linear-gradient(180deg,var(--bg1), #0a0406 40%, var(--bg2));
+    color:#fff;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  
+
+  /* particles container behind everything */
+  #particles-js{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:0.55}
+
+  /* page wrapper */
+  .wrap{max-width:1300px;margin:0 auto;padding:28px 20px 80px;position:relative;z-index:2}
+
+  /* header */
+  header.site-header{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0 22px;
+  }
+  .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-family:Orbitron, sans-serif}
+  .logo .dot{width:12px;height:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:3px;box-shadow:0 6px 18px rgba(255,0,0,0.18)}
+  nav.nav{display:flex;gap:18px;align-items:center}
+  nav.nav a{color:#ddd;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:6px;transition:all .2s}
+  nav.nav a:hover{color:#fff;background:rgba(255,255,255,0.03);}
+
+  .right-actions{display:flex;align-items:center;gap:12px}
+  .search{background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:999px;display:flex;gap:8px;align-items:center}
+  .search input{background:transparent;border:0;color:#fff;outline:none;width:140px}
+
+  .btn-ghost{padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+
+  /* hero */
+  .hero{
+    margin-top:10px;
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    min-height:420px;
+    display:grid;
+    grid-template-columns:1fr 420px;
+    gap:18px;
+    align-items:stretch;
+  }
+
+  .hero-left{
+    padding:30px 36px;
+    display:flex;flex-direction:column;justify-content:center;gap:14px;
+    background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(255,0,0,0.04));
+    backdrop-filter: blur(4px);
+  }
+  .kicker{display:inline-block;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:600;font-size:13px}
+  .hero-title{font-family:Orbitron, sans-serif;font-size:46px;letter-spacing:1px;color:var(--accent);text-shadow:0 8px 40px rgba(255,0,0,0.06)}
+  .hero-sub{color:#f0f0f0;opacity:0.9;font-size:18px;max-width:780px;line-height:1.25}
+  .hero-cta{display:flex;gap:12px;align-items:center;margin-top:8px}
+  .play-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:12px 20px;border-radius:999px;font-weight:700;color:#050505;border:none;cursor:pointer;box-shadow:0 12px 40px rgba(255,45,45,0.12)}
+  .more-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:8px;color:#fff}
+  .meta-row{display:flex;gap:10px;align-items:center;color:var(--muted);margin-top:6px;font-size:14px}
+
+  /* hero right card */
+  .hero-card{
+    background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.2));
+    border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;
+    border:1px solid rgba(255,255,255,0.03);
+    min-height:420px;
+  }
+  .hero-card img{width:100%;height:220px;object-fit:cover;border-radius:8px}
+  .hero-card .price{font-weight:800;color:var(--accent);font-size:20px}
+  .offer-badge{display:inline-block;background:rgba(255,45,45,0.12);color:var(--accent);padding:6px 8px;border-radius:6px;font-weight:700}
+
+  /* rows (horizontal carousels) */
+  .row{margin-top:26px}
+  .row h3{font-family:Orbitron;font-size:18px;margin-bottom:10px;color:#fff}
+  .carousel{
+    display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory;
+  }
+  .card{
+    min-width:220px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.18));
+    border-radius:10px;padding:0;overflow:hidden;border:1px solid rgba(255,255,255,0.04);
+    scroll-snap-align:center;flex:0 0 auto;transition:transform .18s ease, box-shadow .18s;
+  }
+  .card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+  .card img{width:100%;height:130px;object-fit:cover;display:block}
+  .card-inner{padding:10px}
+  .card h4{font-size:15px;margin-bottom:6px;color:#fff}
+  .card .small{color:var(--muted);font-size:13px;margin-bottom:8px}
+  .price-row{display:flex;align-items:center;gap:8px}
+  .old{color:#9a9a9a;text-decoration:line-through;font-size:13px}
+  .new{color:var(--accent);font-weight:800}
+
+  /* carousel arrows */
+  .carousel-wrap{position:relative}
+  .arrow-btn{position:absolute;top:40%;right:6px;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.04);color:#fff;padding:8px;border-radius:8px;cursor:pointer;backdrop-filter:blur(4px)}
+  .arrow-left{left:6px;right:auto}
+
+  /* footer */
+  footer{margin-top:40px;padding:30px 0;color:#bdbdbd;border-top:1px solid rgba(255,255,255,0.04);text-align:center}
+
+  /* responsive */
+  @media (max-width:1000px){
+    .hero{grid-template-columns:1fr}
+    .hero-card{min-height:240px}
+    .wrap{padding:18px}
+  }
+  @media (max-width:600px){
+    .logo span{display:none}
+    .search input{display:none}
+    .card{min-width:170px}
+    .hero-title{font-size:34px}
+  }
+
+  /* small neon highlight */
+  .glow {
+    text-shadow:
+      0 6px 18px rgba(255,0,0,0.12),
+      0 0 18px rgba(0,240,255,0.05);
+  }
+</style>
+</head>
+<body id="vanta-body">
+
+<!-- particles canvas -->
+<div id="particles-js"></div>
+
+<div class="wrap">
+  <header class="site-header">
+    <div class="logo"><div class="dot"></div><span style="font-size:18px">CODE2KILL</span></div>
+
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Discover</a>
+      <a href="#">Top</a>
+      <a href="#">New</a>
+      <a href="#">Collections</a>
+    </nav>
+
+    <div class="right-actions">
+      <div class="search"><i class="fas fa-search"></i><input placeholder="Search titles..."></div>
+      <button class="btn-ghost">Sign In</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <span class="kicker">Featured</span>
+      <div class="hero-title glow">BLACK OPS — NIGHTFALL</div>
+      <div class="hero-sub">Cinematic single-player campaign meets adrenaline-fueled multiplayer. Experience next-level visuals, weapons, and maps — optimized for competitive play.</div>
+
+      <div class="hero-cta">
+        <button class="play-btn"><i class="fas fa-play" style="margin-right:8px"></i> Play Trailer</button>
+        <button class="more-btn">More Info</button>
+      </div>
+
+      <div class="meta-row">
+        <div class="offer-badge">-45%</div>
+        <div style="opacity:.9">SA6000 • Action • 18+</div>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <img src="https://images.unsplash.com/photo-1594831252896-8ce3a2b6d9b9?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="">
+      <div style="width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+        <div>
+          <div style="font-size:13px;color:#cfcfcf">Standard Edition</div>
+          <div class="price">SA6000</div>
+        </div>
+        <button class="btn-ghost">Add to Cart</button>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ROWS -->
+  <div class="row">
+    <h3>Trending Now</h3>
+    <div class="carousel-wrap">
+      <button class="arrow-btn arrow-left" data-target="c1"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel" id="c1">
+        <!-- card sample x6 -->
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1603126851011-e2a15b2b0b8b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="">
+          <div class="card-inner">
+            <h4>Warfront Alpha</h4>
+            <div class="small">Action • Multiplayer</div>
+            <div class="price-row"><span class="old">$69.99</span><span class="new">$38.49</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1616401788091-9d8c1b3f2b77?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="">
+          <div class="card-inner">
+            <h4>Speed Rush</h4>
+            <div class="small">Racing • Single</div>
+            <div class="price-row"><span class="price">Free</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1593642632815-8f6f1c9b9b1c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="">
+          <div class="card-inner">
+            <h4>Cyber Hunter</h4>
+            <div class="small">RPG • Co-op</div>
+            <div class="price-row"><span class="old">$49.99</span><span class="new">$19.99</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="">
+          <div class="card-inner">
+            <h4>Stealth Ops</h4>
+            <div class="small">Stealth • Solo</div>
+            <div class="price-row"><span class="old">$39.99</span><span class="new">$17.99</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1523882451433-86d64e0b91a3?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt="">
+          <div class="card-inner">
+            <h4>Fantasy Quest</h4>
+            <div class="small">Adventure • Single</div>
+            <div class="price-row"><span class="old">$59.99</span><span class="new">$29.99</span></div>
+          </div>
+        </div>
+
+      </div>
+      <button class="arrow-btn" data-target="c1"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <div class="row">
+    <h3>For You</h3>
+    <div class="carousel-wrap">
+      <button class="arrow-btn arrow-left" data-target="c2"><i class="fas fa-chevron-left"></i></button>
+      <div class="carousel" id="c2">
+        <!-- more cards -->
+        <div class="card"><img src="https://images.unsplash.com/photo-1526178615524-6f9b2d3d1a2b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt=""><div class="card-inner"><h4>Raid Legends</h4><div class="small">MMO • Co-op</div><div class="price-row"><span class="price">Free</span></div></div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1511517130924-99cb8759a8f7?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt=""><div class="card-inner"><h4>Neon Racer</h4><div class="small">Racing</div><div class="price-row"><span class="old">$29.99</span><span class="new">$9.99</span></div></div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1511509762087-6b1b9a0f3e3d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=1" alt=""><div class="card-inner"><h4>Skyborne</h4><div class="small">Flight • Multiplayer</div><div class="price-row"><span class="old">$39.99</span><span class="new">$19.99</span></div></div></div>
+
+      </div>
+      <button class="arrow-btn" data-target="c2"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Code2Kill — Demo UI. Images: Unsplash. Built for exhibition.
+  </footer>
+</div>
+
+<script>
+/* tsParticles init (subtle) */
+document.addEventListener('DOMContentLoaded', () => {
+  tsParticles.load("particles-js", {
+    particles: {
+      number: { value: 45 },
+      color: { value: ["#ff2d2d", "#00f0ff"] },
+      shape: { type: "circle" },
+      opacity: { value: 0.45 },
+      size: { value: { min: 1, max: 4 } },
+      move: { enable: true, speed: 0.4, direction: "none" },
+      links: { enable: true, distance: 120, color: "#ff2d2d", opacity: 0.06, width: 1 }
+    },
+    interactivity: { events: { onHover: { enable: true, mode: "repulse" } } },
+    detectRetina: true
+  });
+
+  // horizontal carousel arrows: scroll by width
+  document.querySelectorAll('.arrow-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const targetId = btn.getAttribute('data-target');
+      if(!targetId) return;
+      const carousel = document.getElementById(targetId);
+      const dir = btn.querySelector('i').classList.contains('fa-chevron-right') ? 1 : -1;
+      const amount = carousel.clientWidth * 0.7; // scroll partial view
+      carousel.scrollBy({ left: amount * dir, behavior: 'smooth' });
+    });
+  });
+
+  // nice keyboard support
+  window.addEventListener('keydown', (e) => {
+    if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+      const first = document.querySelector('.carousel');
+      first && first.scrollBy({ left: e.key === 'ArrowRight' ? first.clientWidth*0.7 : -first.clientWidth*0.7, behavior:'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>

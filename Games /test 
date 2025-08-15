@@ -1,0 +1,82 @@
+.steam-offer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #2a475e;
+    width: 70%;
+    padding: 10px 20px;
+    border-radius: 4px;
+    height: 10vh;
+    color: white;
+    
+    font-family: Arial, sans-serif;
+    /* important for absolute positioning */
+  }
+
+
+
+  .offer-text {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #c7d5e0;
+  }
+
+  .offer-right-box {
+    display: flex;
+    align-items: center;
+    background-color: #1b2838;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 2px;
+    position: absolute;
+    left: 70%;
+    top: 100%;
+    transform: translateY(-50%);
+  }
+
+  .discount {
+    background-color: #4c9a2a;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .price-box {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin: 0 8px;
+  }
+
+  .old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #9ca3af;
+  }
+
+  .new-price {
+    color: #a4d007;
+    font-weight: bold;
+  }
+
+  .add-to-cart {
+    background-color: #4c9a2a;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .add-to-cart:hover {
+    background-color: #3b7d1f;
+  }
+
+  .sec-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0 0 0; 
+    gap: 5px;
+  }

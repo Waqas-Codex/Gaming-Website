@@ -1,0 +1,227 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+ body{
+      background: 
+    linear-gradient(#1b1b2f, rgba(255, 0, 0, 0.316)), 
+    url('../../Images/counter-strike-2-7680x4480-11129.png') center/cover no-repeat;
+     /* background: linear-gradient(135deg, #ff0000, #ff00ff, #00f0ff);
+      animation: gradientMove 8s ease infinite;
+  z-index: -1;
+  }
+   @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }*/
+
+    
+  }    
+  
+
+  .container-1 {
+    padding: 20px 150px 0 200px;
+  }
+
+  .txt-btn {
+    background-color: #1b1b2f;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .content-img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+  }
+
+  .hub-btn {
+    background: linear-gradient(45deg, #0c53ed4d, #010e1943);
+    border: none;
+    padding: 5px;
+    color: white;
+    transition: all 1s ease-in;
+
+  }
+
+  .hub-btn:hover {
+    background: linear-gradient(45deg, #0c53ed, #010e19);
+    box-shadow: 0 0 5px 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .div-container {
+    display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  }
+
+
+.image-column {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.div-image {
+  width: 100%;
+  height: auto;
+}
+
+.thumbs-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.thumb {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.thumb:hover {
+  border: 2px solid #1b1b2f;
+}
+
+.game-details {
+  background-color: #1910017f;
+  padding: 10px;
+  color: wheat;
+  width: 30%;
+  backdrop-filter: blur(10px);
+}
+
+.details-logo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+.thumb:hover {
+  transform: scale(1.1);
+  border-color: red;
+}
+
+
+  .dev-details,
+  .pub-div,
+  .re-date {
+    margin: 10px 0 0 0;
+  }
+
+
+  .first-span {
+    color: red;
+    font-family: "Edu NSW ACT Cursive", cursive;
+  }
+
+  .second-span {
+    color: wheat;
+
+  }
+
+  .steam-offer {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #2a475e;
+    width: 70%;
+    padding: 5px 0 0 20px;
+    border-radius: 4px;
+    height: 10vh;
+    color: white;   
+    font-family: Arial, sans-serif;
+    
+  }
+
+
+
+  .offer-text {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #c7d5e0;
+  }
+
+  .offer-right-box {
+    display: flex;
+    align-items: center;
+    background-color: #1b2838;
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 2px;
+    height: 8vh;
+    /* position: absolute;
+    left: 70%;
+    top: 100%;
+    transform: translateY(-50%); */
+  }
+
+  .discount {
+    background-color: #4c9a2a;
+    padding: 5px 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+  }
+
+  .price-box {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin: 0 8px;
+  }
+
+  .old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #9ca3af;
+  }
+
+  .new-price {
+    color: #a4d007;
+    font-weight: bold;
+  }
+
+  .add-to-cart {
+    background-color: #4c9a2a;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .add-to-cart:hover {
+    background-color: #3b7d1f;
+  }
+
+  .sec-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0 0 0; 
+    gap: 5px;
+  }
+
+  .sidebar{
+    background-color: #010e1972;
+    width: 30%;
+    padding: 10px 10px 0 20px;
+    letter-spacing: 5px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+    
+  }
+  .sidebar a li{
+    background-color: rebeccapurple;
+  }
