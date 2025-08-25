@@ -1,147 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../Styles/styles.css">
 </head>
 <style>
-        .contact-content{
-          height: 40vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-image: url(../Images/007-first-light-3840x2160-22684.jpg);
-          background-size: cover;
-          background-repeat: no-repeat;
-          
-        }
-        .contact-heading{
-          text-align: center;
-          color: black;
-        }
+  .contact-content {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../Images/007-first-light-3840x2160-22684.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
-        .contact-section {
-  padding: 40px 20px;
-  background-color: #111;
-  color: #fff;
-}
+  }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  background: #1e1e1e;
-  padding: 30px;
-  border-radius: 10px;
-}
+  .contact-heading {
+    text-align: center;
+    color: black;
+  }
 
-.contact-form .form-group {
-  margin-bottom: 20px;
-}
+  .contact-section {
+    padding: 40px 20px;
+    background-color: #111;
+    color: #fff;
+  }
 
-.contact-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+  }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  background-color: #2a2a2a;
-  border: 1px solid #444;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 16px;
-}
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #00ffcc;
-}
+  .contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
 
-.submit-btn {
-  background-color: #00ffcc;
-  color: #000;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+  }
 
-.submit-btn:hover {
-  background-color: #00ddb3;
-}
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #00ffcc;
+  }
 
+  .submit-btn {
+    background: linear-gradient(45deg, #0c53ed, #05173a);
+    color: #000;
+    border: none;
+    color: #f0f0f0f0;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+
+  }
+
+  .submit-btn:hover {
+    background: linear-gradient(to right ,rgba(255, 0, 0, 0.658), #0c7fcc) ; 
+  }
 </style>
+
 <body>
 
-     <header class="main">
-    <div class="logo">
-      <a href="/">🎮 Code2Kill</a>
-    </div>
-    <li class="search-container">
+  <header class="main">
+
+    <div class="search-container">
       <i class="fas fa-search" style="margin-right: 5px;"></i>
       <input type="text" placeholder="Search..." class="search-input">
-    </li>
-    <nav class="nav-bar">
-      <ul class="nav-links">
-        <li><a href=""><i class="fas fa-home"></i> Home</a></li>
-        <li><a href=""><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href=""><i class="fas fa-question-circle"></i> FAQ</a></li>
-        <li><a href=""><i class="fas fa-envelope"></i> Contact Us</a></li>
-        <div class="btn-div">
-          <button class="btn">Login</button>
-        </div>
-      </ul>
-    </nav>
+    </div>
+    <div class="btn-div">
+      <a href="#">
+        <button class="btn">Login</button>
+      </a>
+      <a href="#">
+
+        <button class="btn">Sign Up</button>
+      </a>
+    </div>
+
   </header>
+  <nav class="nav">
+    <div class="logo">
+      <a href="/">
+        <img class="Logo-img"
+          src="../imgaes2/Parteiadler_Nationalsozialistische_Deutsche_Arbeiterpartei_(1933–1945).svg" alt="">
+      </a>
+    </div>
+    <div class="menu-toggle" onclick="greet()">
+      <img src="../SVGS/Google Stadia Logo - 1280x1279.png" alt="">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="Contact Us/Contact.html"> Contact Us</a></li>
+
+
+    </ul>
+
+  </nav>
 
   <div class="contact-container">
     <div class="contact-content">
       <div class="contact-text">
-      <h1 class="contact-heading">Contact Us</h1>
-      <p>Get In Touch With Us We Are Always Here To Help You</p>
+        <h1 class="contact-heading">Contact Us</h1>
+        <p>Get In Touch With Us We Are Always Here To Help You</p>
       </div>
     </div>
   </div>
 
   <section class="contact-section">
-  <div class="container">
-    <form action="#" method="POST" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name *</label>
-        <input type="text" id="name" name="name" required />
-      </div>
+    <div class="container">
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
 
-      <div class="form-group">
-        <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required />
-      </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
 
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" />
-      </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" />
+        </div>
 
-      <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-    
-  </div>
-</section>
+        <button type="submit" class="submit-btn" >Send Message</button>
+      </form>
+
+    </div>
+  </section>
 
 
-   <!--Footer Start-->
+  <!--Footer Start-->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-col">
@@ -159,7 +180,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-      
+
 
       <div class="footer-col">
         <h3>Contact</h3>
@@ -171,9 +192,10 @@
     <div class="footer-bottom">
       <p>&copy; 2025 Hello World. All rights reserved.</p>
     </div>
-    
+
   </footer>
 
   <!--Footer End-->
 </body>
+
 </html>

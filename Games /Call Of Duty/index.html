@@ -15,28 +15,51 @@
 
 </head>
 
-<body id="bg">
+<body style="
+background: 
+  linear-gradient(#1b1b2f, rgba(255, 0, 0, 0.316)), /* color + opacity */
+  url('../../Images/delta-force-hawk-6422x3568-21396.jpg') center/cover no-repeat;
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+"
+>
   <!-- <canvas id="rainCanvas"></canvas> -->
-  <header class="main">
+   <header class="main">
     <div class="logo">
-      <a href="/">🎮 Code2Kill</a>
+      <a href="/">
+        <img class="Logo-img" src="../../imgaes2/Parteiadler_Nationalsozialistische_Deutsche_Arbeiterpartei_(1933–1945).svg" alt="">
+      </a>
     </div>
-    <li class="search-container">
+    <div class="search-container">
       <i class="fas fa-search" style="margin-right: 5px;"></i>
       <input type="text" placeholder="Search..." class="search-input">
-    </li>
-    <nav class="nav-bar">
+    </div>
+    <div class="btn-div">
+          <a href="#">
+          <button class="btn">Login</button>
+          </a>
+        <a href="#">
+
+          <button class="btn">Sign Up</button>
+          </a>
+        </div>
+    
+  </header>
+  <nav class="nav">
+    
+    <div class="nav-bar">
       <ul class="nav-links">
         <li><a href=""><i class="fas fa-home"></i> Home</a></li>
         <li><a href=""><i class="fas fa-info-circle"></i> About</a></li>
         <li><a href=""><i class="fas fa-question-circle"></i> FAQ</a></li>
         <li><a href="Contact Us/Contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
-        <div class="btn-div">
-          <button class="btn">Login</button>
-        </div>
+        
+        
       </ul>
-    </nav>
-  </header>
+      
+    </div>
+  </nav>
 
   <section class="container-1">
     <div class="img-div">
@@ -66,23 +89,15 @@
     <img class="details-logo" src="../../imgaes2/Cyberpunk2077-PhantomLiberty-Ultimate_Edition_Keyart.webp" alt="Game Logo">
     Call of Duty®: Black Ops 6 is signature Black Ops across a cinematic single-player Campaign, a best-in-class
     Multiplayer experience and with the epic return of Round-Based Zombies.
-    <div class="dev-details">
-      <span class="first-span">Developer:</span>
-      <span class="second-span">Hakla</span>
-    </div>
-    <div class="pub-div">
-      <span class="first-span">Publisher:</span>
-      <span class="second-span">Hakla</span>
-    </div>
-    <div class="re-date">
-      <span class="first-span">Release Date:</span>
-      <span class="second-span">5/8/2025</span>
-    </div>
+    <p><strong>Developer:</strong> Hakla</p>
+      <p><strong>Publisher:</strong> Hakla</p>
+      <p><strong>Release Date:</strong> 5/8/2025</p>
   </div>
   
 </div>
 
     </div>
+    
 
     <div class="sec-section">
     <div class="steam-offer">
@@ -96,12 +111,14 @@
         <div class="discount">-45%</div>
         <div class="price-box">
           <span class="old-price">$69.99</span>
-          <span class="new-price">SA6000 Rand</span>
+          <span class="new-price">$59.00</span>
         </div>
-        <button class="add-to-cart">Buy Now</button>
+        <a href="buy.html">
+        <button button class="add-to-cart">Buy Now</button>
+        </a>
       </div>
     </div>
-    <div class="sidebar">
+    <!-- <div class="sidebar">
      <a href="#">
       <li class="sidebar-links">achievements</li>
       </a>
@@ -118,8 +135,39 @@
       <li class="sidebar-links">achievements</li>
       </a>
      
+    </div> -->
     </div>
-    </div>
+    <div class="system-requirements">
+  <h2>System Requirements</h2>
+  <div class="tabs">
+    <button class="tab active" data-tab="windows">Windows</button>
+    <button class="tab" data-tab="steamos-linux">Linux</button>
+  </div>
+  <div class="tab-content active" id="windows">
+    <h3>Minimum:</h3>
+    <ul>
+      <li><strong>OS:</strong> Windows® 10</li>
+      <li><strong>Processor:</strong> 4 hardware CPU threads - Intel® Core™ i5 750 or higher</li>
+      <li><strong>Memory:</strong> 32 GB RAM</li>
+      <li><strong>Graphics:</strong> Video card must be 1 GB or more and should be a DirectX 11-compatible with support for Shader Model 5.0</li>
+      <li><strong>DirectX:</strong> Version 11</li>
+      <li><strong>Storage:</strong> 85 GB available space</li>
+    </ul>
+  </div>
+  <!-- Add SteamOS + Linux content if needed -->
+  <div class="tab-content" id="steamos-linux">
+    <!-- Content for SteamOS + Linux can be added here -->
+       <h3>Minimum:</h3>
+    <ul>
+      <li><strong>OS:</strong> Linux</li>
+      <li><strong>Processor:</strong> 4 hardware CPU threads - Intel® Core™ i5 750 or higher</li>
+      <li><strong>Memory:</strong> 16 GB RAM</li>
+      <li><strong>Graphics:</strong> Video card must be 1 GB or more and should be a DirectX 11-compatible with support for Shader Model 5.0</li>
+      <li><strong>DirectX:</strong> Version 11</li>
+      <li><strong>Storage:</strong> 85 GB available space</li>
+    </ul>
+  </div>
+</div>
 
   </section>
   <!--Footer Start-->
@@ -145,8 +193,8 @@
       <div class="footer-col">
         <h3>Contact</h3>
         <p>Email: Cap@gmail.com.com</p>
-        <p>Phone: +98 11 2 tatte ek Lund</p>
-        <p>Location: LaudaPur</p>
+        <p>Phone: +92</p>
+        <p>Location: Larkana</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -211,86 +259,17 @@ document.addEventListener("DOMContentLoaded", function () {
 //   backgroundColor: 0x000000
 // })
 
-VANTA.NET({
-  el: "#bg", // body ka id
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x39ff14
-, // lines ka color (gaming red)
-  backgroundColor: 0x1b1b2f, // black background
-  points: 15.00, // dots kam ya zyada
-  maxDistance: 20.00, // lines ki length
-  spacing: 18.00 // spacing
-})
- 
-setTimeout(() => {
-  document.querySelector('canvas').style.zIndex = "-1";
-  document.querySelector('canvas').style.position = "fixed";
-  document.querySelector('canvas').style.top = "0";
-  document.querySelector('canvas').style.left = "0";
-}, 100);
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.getAttribute('data-tab')).classList.add('active');
+  });
+});
 
 </script>
-
-<style>
-
-.div-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-/* Hover par zoom */
-.div-image:hover {
-  transform: scale(1.01);
-}
-
-/* Thumb style */
-.thumb {
-  width: 80px;
-  height: 60px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 6px;
-  object-fit: cover;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.thumb:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
-}
-
-/* Active thumb */
-.thumb.active {
-  outline: 2px solid red;
-}
-
-/* Animation classes */
-.slide-out {
-  transform: translateX(-30px);
-  opacity: 0;
-}
-
-.slide-in {
-  transform: translateX(30px);
-  opacity: 0;
-}
-
-  body, html {
-    margin: 0;
-    padding: 0;
-    background: black;
-  }
-  
-</style>
 
 
 

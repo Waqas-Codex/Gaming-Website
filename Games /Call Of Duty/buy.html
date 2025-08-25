@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../Styles/styles.css">
+  <title>Secure Checkout</title>
+  <style>
+    .body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .checkout-box {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 15px;
+      width: 380px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .checkout-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #38bdf8;
+    }
+
+    .order-summary {
+      background: #334155;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .order-summary strong {
+      color: #22c55e;
+    }
+
+    .payment-method {
+      margin-bottom: 20px;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      background: #0f172a;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .payment-option:hover {
+      border: 1px solid #38bdf8;
+    }
+
+    .payment-option svg {
+      width: 22px;
+      height: 22px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .payment-option.active {
+      border: 1px solid #22c55e;
+      background: rgba(34, 197, 94, 0.1);
+    }
+
+   #card-fields input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 14px;
+      background: #334155;
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #9ca3af;
+    }
+
+    .buy-btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    .buy-btn:hover {
+      background: #16a34a;
+    }
+
+    .note {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      color: #9ca3af;
+    }
+
+    /* 🔹 Hide sections by default */
+    .hidden {
+      display: none;
+    }
+
+    .paypal-box {
+      background: #0f172a;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .paypal-box img {
+      width: 120px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main">
+    <div class="logo">
+      <a href="/">
+        <img class="Logo-img" src="../../imgaes2/Parteiadler_Nationalsozialistische_Deutsche_Arbeiterpartei_(1933–1945).svg" alt="">
+      </a>
+    </div>
+    <div class="search-container">
+      <i class="fas fa-search" style="margin-right: 5px;"></i>
+      <input type="text" placeholder="Search..." class="search-input">
+    </div>
+    <div class="btn-div">
+          <a href="#">
+          <button class="btn">Login</button>
+          </a>
+        <a href="#">
+
+          <button class="btn">Sign Up</button>
+          </a>
+        </div>
+    
+  </header>
+
+  <div class="body">
+
+  
+
+  <div class="checkout-box">
+    <h2>SECURE CHECKOUT</h2>
+
+    <div class="order-summary">
+      <p><strong>GAME:</strong> Call of Duty: Black Ops 7</p>
+      <p><strong>PRICE:</strong> $69.99</p>
+      <p><strong>TOTAL:</strong> $69.99</p>
+    </div>
+
+    <!-- Payment options -->
+    <div class="payment-method">
+      <div class="payment-option active" data-method="mastercard">
+        <svg fill="#22c55e" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#22c55e" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#22c55e"/></svg>
+        Mastercard
+      </div>
+      <div class="payment-option" data-method="paypal">
+        <svg fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="#9ca3af" stroke-width="2"/></svg>
+        Paypal
+      </div>
+    </div>
+
+    <!-- Mastercard Form -->
+    <div id="card-fields">
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="MM/YY">
+      <input type="text" placeholder="CVV">
+      <input type="text" placeholder="Cardholder Name">
+      <button class="buy-btn">PAY NOW</button>
+    </div>
+
+    <!-- PayPal Section -->
+    <div id="paypal-fields" class="hidden">
+      <div class="paypal-box">
+        <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal">
+        <p>Proceed securely with your PayPal account</p>
+        <button class="buy-btn" style="background:#0070ba;">Login with PayPal</button>
+      </div>
+    </div>
+
+    <p class="note">Your payment is secured with 256-bit encryption.</p>
+  </div>
+  </div>
+
+  <script>
+    const options = document.querySelectorAll('.payment-option');
+    const cardFields = document.getElementById('card-fields');
+    const paypalFields = document.getElementById('paypal-fields');
+
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('active'));
+        option.classList.add('active');
+
+        // Change SVG dynamically
+        options.forEach(o => {
+          const svg = o.querySelector('svg');
+          if (o.classList.contains('active')) {
+            svg.innerHTML = '<circle cx="12" cy="12" r="10" stroke="#22c55e" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="#22c55e"/>';
+          } else {
+            svg.innerHTML = '<circle cx="12" cy="12" r="10" stroke="#9ca3af" stroke-width="2"/>';
+          }
+        });
+
+        // Show/Hide sections
+        if (option.dataset.method === "paypal") {
+          cardFields.classList.add("hidden");
+          paypalFields.classList.remove("hidden");
+        } else {
+          paypalFields.classList.add("hidden");
+          cardFields.classList.remove("hidden");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -12,25 +12,20 @@
 
 </head>
 
-<body id="bg">
-  <header class="main">
-    <div class="logo">
-      <a href="/">
-        <img class="Logo-img" src="imgaes2/Parteiadler_Nationalsozialistische_Deutsche_Arbeiterpartei_(1933–1945).svg" alt="">
-      </a>
-    </div>
+<body>
+  
+  <div id="loader">
+  <div class="crosshair"></div>
+  <div class="loading-text">Code2Kill</div>
+</div>
 
-    <!-- <div class="svgs">
-      <a class="svg">
-        <img src="SVGS/twitter-brands-solid-full.svg" alt="">
-      </a>  
-      <a class="svg">
-        <img src="SVGS/facebook-brands-solid-full.svg" alt="">
-      </a>
-      <a class="svg">
-        <img src="SVGS/reddit-alien-brands-solid-full.svg" alt="">
-      </a>
-    </div> -->
+<div id="flash"></div>
+
+<!-- Gunfire Sound -->
+<audio id="gunfire" src="caulking-gun-back-381411.mp3" preload="auto"></audio>
+
+  <header class="main">
+    
     <div class="search-container">
       <i class="fas fa-search" style="margin-right: 5px;"></i>
       <input type="text" placeholder="Search..." class="search-input">
@@ -47,18 +42,24 @@
     
   </header>
   <nav class="nav">
+    <div class="logo">
+      <a href="/">
+        <img class="Logo-img" src="imgaes2/Parteiadler_Nationalsozialistische_Deutsche_Arbeiterpartei_(1933–1945).svg" alt="">
+      </a>
+    </div>
+  <div class="menu-toggle" onclick="greet()">
+    <img src="SVGS/Google Stadia Logo - 1280x1279.png" alt="">
+  </div>
     
-    <div class="nav-bar">
       <ul class="nav-links">
-        <li><a href=""><i class="fas fa-home"></i> Home</a></li>
-        <li><a href=""><i class="fas fa-info-circle"></i> About</a></li>
-        <li><a href=""><i class="fas fa-question-circle"></i> FAQ</a></li>
-        <li><a href="Contact Us/Contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="Contact Us/Contact.html"> Contact Us</a></li>
         
         
       </ul>
       
-    </div>
   </nav>
 
   <!--------Hero Section Start--------->
@@ -441,75 +442,10 @@
 
   <!--Footer End-->
 
-
+<script src="Script.js" defer></script>
 
 </body>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, 
-    offset: 120,    
-    once: true      
-  });
-
-
-
-const heroData = [
-      {
-        image: 'Images/call-of-duty-black-ops-7-ej-1920x1080.jpg',
-        title: 'Call of Duty',
-        desc: 'Welcome to battle zone!',
-        link: 'https://www.callofduty.com/blackops7'
-      },
-      {
-        image: 'Images/gta-vi-wallpaper-made-from-all-the-new-artwork-v0-i4j746bkxeze1.jpg',
-        title: 'Grand Theft Auto',
-        desc: 'Ultimate Gaming experience.',
-        link: 'https://www.rockstargames.com/VI' 
-      },
-      {
-        image: 'Images/mafia-the-old-7680x4320-22472.jpg',
-        title: 'Mafia The Country',
-        desc: 'Experience This New Mafia Game.',
-        link: 'https://mafia.com/preorder'
-      },
-      {
-        image: 'Images/neymar-jr-efootball-3840x2160-22229.jpg',
-        title: 'FIFA 25',
-        desc: 'Kick off with the latest football game.',
-        // link: 'https://fifa.com/preorder'
-      }
-    ];
-
-    let currentHero = 0;
-
-    function updateHeroImage() {
-      const hero = document.getElementById('heroSection');
-      const title = document.getElementById('heroTitle');
-      const desc = document.getElementById('heroDesc');
-      const btn = document.getElementById('main-btn1');
-
-      hero.style.backgroundImage = `url('${heroData[currentHero].image}')`;
-      title.textContent = heroData[currentHero].title;
-      desc.textContent = heroData[currentHero].desc;
-      btn.href = heroData[currentHero].link;
-      btn.textContent = 'PRE-ORDER NOW';
-    }
-
-    function nextHero() {
-      currentHero = (currentHero + 1) % heroData.length;
-      updateHeroImage();
-    }
-
-    function prevHero() {
-      currentHero = (currentHero - 1 + heroData.length) % heroData.length;
-      updateHeroImage();
-    }
-
-    updateHeroImage();
-
-
-
-</script>
 
 </html>
+

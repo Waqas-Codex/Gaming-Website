@@ -225,3 +225,113 @@
   .sidebar a li{
     background-color: rebeccapurple;
   }
+
+
+
+  .system-requirements {
+  background: #1a252f;
+  color: #b0bec5;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 70%;
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.system-requirements h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.tabs {
+  margin-bottom: 15px;
+}
+
+.tab {
+  background: #2c3e50;
+  color: #b0bec5;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.tab.active {
+  background: #34495e;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tab-content ul li {
+  margin-bottom: 10px;
+}
+
+.tab-content ul li strong {
+  color: #fff;
+}
+
+.div-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Hover par zoom */
+.div-image:hover {
+  transform: scale(1.01);
+}
+
+/* Thumb style */
+.thumb {
+  width: 80px;
+  height: 60px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.thumb:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Active thumb */
+.thumb.active {
+  outline: 2px solid red;
+}
+
+/* Animation classes */
+.slide-out {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+.slide-in {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: black;
+  }
+  
